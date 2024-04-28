@@ -1,4 +1,3 @@
-/* Default styles */
 :root {
   --graphite: #1d1c1a;
   --sandstone: #e4dcc6;
@@ -16,12 +15,13 @@
 .container-wrapper {
   background-color: var(--ivory);
   display: flex;
+  font-family: var(--body-font);
   flex-direction: column;
   min-height: 100vh;
 }
 
 .navbar-brand.home-link {
-  color: var(--terra-cotta);
+  color: var(--graphite);
   font-family: var(--logo-font);
   font-size: 24px;
   font-weight: 300;
@@ -30,13 +30,28 @@
 
 .nav-links {
   align-items: center;
-  color: var(--graphite);
   display: flex;
   font-family: var(--body-font);
   font-size: 18px;
   gap: 30px;
   margin-left: auto;
-  padding: 0 40px 20px 0;
+  padding: 0 20px 15px 0;
+}
+
+.nav-links a,
+footer a,
+#contact a {
+  border-bottom: 2px solid transparent;
+  color: var(--graphite);
+  padding: 0;
+  text-decoration: none;
+  transition: border-color 0.3s ease;
+}
+
+.nav-links a:hover,
+footer a:hover,
+#contact a:hover {
+  border-bottom-color: var(--graphite);
 }
 
 nav button {
@@ -53,8 +68,8 @@ main {
   color: var(--graphite);
   font-family: var(--body-font);
   font-weight: 500;
-  font-size: 62px;
-  height: 62vh;
+  font-size: 60px;
+  height: 50vh;
   margin-top: 100px;
   text-align: center;
 }
@@ -63,25 +78,69 @@ main {
   color: var(--graphite);
   font-family: var(--logo-font);
   font-weight: 300;
-  font-size: 62px;
 }
 
-.work-section h2 {
+.overlay {
+  background-color: var(--pale-lime);
+  border-radius: 9px;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--body-font);
+  height: calc(100% - 46px);
+  justify-content: center;
+  left: 0;
+  opacity: 0;
+  padding: 25px;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  transition: opacity 0.3s ease;
+  width: 100%;
+}
+
+.overlay h3 {
   color: var(--graphite);
   font-family: var(--body-font);
-  font-size: 32px;
-  font-weight: 400;
+  font-size: 24px;
+  font-weight: 500;
   text-align: center;
   margin-bottom: 20px;
 }
 
-.section-title {
+.overlay p {
   color: var(--graphite);
-  font-family: var(--body-font);
-  font-size: 32px;
-  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+
+span.accent {
+  border: 1px solid var(--graphite);
+  border-radius: 20px;
+  color: var(--graphite);
+  font-size: 14px;
+  padding: 8px 16px;
+}
+
+.gallery:hover .overlay {
+  opacity: 1;
+}
+
+.section-title-home {
+  color: var(--ivory);
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+
+.section-title-about {
+  font-weight: 500;
+  margin-bottom: 25px;
   text-align: center;
-  margin-bottom: 40px;
+}
+
+.section-title-contact {
+  font-weight: 500;
+  margin-bottom: 25px;
+  text-align: center;
 }
 
 #work .gallery {
@@ -97,47 +156,64 @@ main {
   border-radius: 10px;
   height: 100%;
   object-fit: cover;
+  margin-bottom: 40px;
   transition: opacity 0.3s ease;
   width: 100%;
 }
 
-.overlay {
-  background-color: var(--indigo);
-  border-radius: 10px;
-  color: var(--ivory);
-  display: flex;
-  flex-direction: column;
-  font-family: var(--body-font);
-  height: calc(100% - 6px);
-  justify-content: center;
-  left: 0;
-  opacity: 0;
-  padding: 20px;
-  position: absolute;
-  text-align: center;
-  top: 0;
-  transition: opacity 0.3s ease;
-  width: 100%;
-}
-
-.gallery:hover .overlay {
-  opacity: 1;
-}
-
-footer {
+#about-home {
+  align-items: center;
   background-color: var(--graphite);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.about-text-home {
   color: var(--ivory);
   font-family: var(--body-font);
-  padding: 40px;
+  font-size: 18px;
+  line-height: 1.5;
+  margin: auto;
+  margin-bottom: 30px;
+  max-width: 50%;
+  text-align: center;
 }
 
-footer a {
-  color: var(--ivory);
+#about .call-to-action a {
+  border-bottom: 2px solid transparent;
+  color: var(--graphite);
+  padding: 5px;
   text-decoration: none;
+  transition: border-color 0.3s ease;
 }
 
-footer a:hover {
-  color: var(--magnolia);
+#about .call-to-action a:hover {
+  border-bottom-color: var(--graphite);
+}
+
+.call-to-action a {
+  border-bottom: 2px solid transparent;
+  color: var(--ivory);
+  padding: 5px;
+  text-decoration: none;
+  transition: border-color 0.3s ease;
+}
+
+.call-to-action a:hover {
+  border-bottom-color: var(--ivory);
+}
+
+.material-symbols-outlined {
+  vertical-align: middle;
+}
+
+.signature {
+  margin-top: 25px;
+  width: 125px;
 }
 
 #about,
@@ -154,55 +230,23 @@ footer a:hover {
   margin-bottom: 30px;
 }
 
-/* Media queries */
-
-/* Small devices (phones, 576px and down) */
-@media (max-width: 576px) {
-  .navbar-brand.home-link {
-    font-size: 16px;
-    padding: 0 0 5px 20px;
-  }
-
-  .nav-links {
-    font-size: 12px;
-    padding: 0 5px 5px 0;
-    gap: 5px;
-  }
-
-  main {
-    margin: 20px;
-  }
-
-  .landing-section h1,
-  .landing-section h1 .logo {
-    font-size: 24px !important;
-    height: 62vh !important;
-    line-height: 1.5;
-    margin-top: 0;
-  }
-
-  .work-section h2 {
-    display: none;
-  }
-
-  #work .gallery {
-    margin-bottom: 20px;
-  }
-
-  .overlay h3 {
-    font-size: 16px;
-  }
-
-  .overlay p {
-    font-size: 14px;
-  }
-
-  footer {
-    font-size: 12px;
-  }
+span.material-symbols-outlined {
+  margin-right: 5px;
 }
 
-/* Medium devices (tablets, 768px and down) */
+footer {
+  background-color: var(--ivory);
+  color: var(--graphite);
+  font-family: var(--body-font);
+  padding: 40px;
+}
+
+footer a {
+  color: var(--graphite);
+  text-decoration: none;
+}
+
+/* Medium devices */
 @media (max-width: 768px) {
   .navbar-brand.home-link {
     font-size: 20px;
@@ -226,7 +270,7 @@ footer a:hover {
   }
 
   .overlay h3 {
-    font-size: 16px;
+    font-size: 20px !important;
   }
 
   .overlay p {
@@ -234,7 +278,7 @@ footer a:hover {
   }
 }
 
-/* Large devices (desktops, 992px and down) */
+/* Large devices */
 @media (max-width: 992px) {
   .navbar-brand.home-link {
     font-size: 20px;
@@ -261,10 +305,17 @@ footer a:hover {
   }
 
   .overlay h3 {
-    font-size: 16px;
+    font-size: 24px !important;
   }
 
   .overlay p {
-    font-size: 14px;
+    font-size: 18px !important;
+  }
+}
+
+/* Extra large devices */
+@media (max-width: 1200px) {
+  main {
+    padding: 40px;
   }
 }

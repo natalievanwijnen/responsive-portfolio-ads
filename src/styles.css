@@ -169,15 +169,6 @@ span.accent {
   text-align: center;
 }
 
-img.portrait {
-  border-radius: 10px;
-  margin: auto;
-  margin-bottom: 30px;
-  max-width: 300px;
-  width: 50%;
-  display: block;
-}
-
 .about-text-home {
   color: var(--ivory);
   font-family: var(--body-font);
@@ -185,6 +176,7 @@ img.portrait {
   line-height: 1.5;
   margin-bottom: 30px;
   max-width: 100%;
+  padding: 25px;
 }
 
 #about .call-to-action a {
@@ -257,6 +249,17 @@ footer a {
   text-decoration: none;
 }
 
+.icon {
+  font-size: 24px;
+  margin-left: 20px;
+}
+
+#about .icon,
+#contact .icon {
+  font-size: 24px;
+  margin-left: 20px;
+}
+
 .about footer,
 .contact footer {
   position: fixed;
@@ -315,6 +318,20 @@ footer a {
   color: var(--ivory);
 }
 
+/* Small devices */
+@media (max-width: 576px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .footer-info {
+    margin-bottom: 20px;
+  }
+}
+
 /* Medium devices */
 @media (max-width: 768px) {
   .navbar-brand.home-link {
@@ -344,6 +361,10 @@ footer a {
 
   .overlay p {
     font-size: 14px;
+  }
+
+  footer {
+    padding: 30px;
   }
 }
 
@@ -380,11 +401,19 @@ footer a {
   .overlay p {
     font-size: 18px !important;
   }
+
+  footer {
+    padding: 40px;
+  }
 }
 
 /* Extra large devices */
 @media (max-width: 1200px) {
   main {
     padding: 40px;
+  }
+
+  footer {
+    padding: 50px;
   }
 }

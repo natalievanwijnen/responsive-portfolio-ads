@@ -172,15 +172,22 @@ span.accent {
   text-align: center;
 }
 
+img.portrait {
+  border-radius: 10px;
+  margin: auto;
+  margin-bottom: 30px;
+  max-width: 300px;
+  width: 50%;
+  display: block;
+}
+
 .about-text-home {
   color: var(--ivory);
   font-family: var(--body-font);
   font-size: 18px;
   line-height: 1.5;
-  margin: auto;
   margin-bottom: 30px;
-  max-width: 50%;
-  text-align: center;
+  max-width: 100%;
 }
 
 #about .call-to-action a {
@@ -213,7 +220,7 @@ span.accent {
 
 .signature {
   margin-top: 25px;
-  width: 125px;
+  width: 150px;
 }
 
 #about,
@@ -310,6 +317,10 @@ footer a {
 
   .overlay p {
     font-size: 18px !important;
+  }
+
+  .about-text-home {
+    max-width: 75%;
   }
 }
 

@@ -236,6 +236,10 @@ img.portrait {
   margin-bottom: 30px;
 }
 
+#contact a {
+  background-color: var(--pale-lime);
+}
+
 span.material-symbols-outlined {
   margin-right: 5px;
 }
@@ -296,11 +300,12 @@ footer a {
 
 .custom-submit-btn {
   background-color: var(--pale-lime);
-  color: var(--graphite);
   border: 2px solid var(--pale-lime);
-  padding: 10px 20px;
   border-radius: 5px;
+  color: var(--graphite);
   cursor: pointer;
+  font-size: 18px;
+  padding: 10px 20px;
   transition: background-color 0.3s ease, border 0.3s ease, color 0.3s ease;
 }
 

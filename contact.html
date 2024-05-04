@@ -42,7 +42,7 @@
     <title>another design studio</title>
     <link rel="icon" type="image/png" href="images/ads.png" />
   </head>
-  <body>
+  <body class="contact">
     <div class="container-wrapper">
       <nav class="navbar navbar-expand-lg custom-navbar">
         <a class="navbar-brand home-link" href="index.html">ads</a>
@@ -68,65 +68,53 @@
 
       <main>
         <section id="contact">
-          <div class="contact">
-            <div class="row">
-              <div class="col-lg-12">
-                <h2 class="contact-title">let's connect!</h2>
-                <p class="contact-text">
-                  Whether you're interested in working with me or just want to
-                  say hi, I'd love to hear from you! Feel free to drop me a
-                  message using the form below, or shoot me an email at
-                  <a href="mailto:welcome@anotherdesign.studio"
-                    >welcome@anotherdesign.studio</a
-                  >.
-                </p>
+          <div class="row">
+            <div class="col-lg-9 mx-auto">
+              <h2 class="contact-title">let's connect!</h2>
+              <p class="contact-text">
+                Whether you're interested in working with me or just want to say
+                hi, I'd love to hear from you! Feel free to drop me a message
+                using the form below, or shoot me an email at
+                <a href="mailto:welcome@anotherdesign.studio"
+                  >welcome@anotherdesign.studio</a
+                >.
+              </p>
 
-                <form id="contact-form">
-                  <div class="row">
-                    <div class="col-lg-6">
-                      <div class="form-group">
-                        <label for="name">name</label>
-                        <input
-                          type="text"
-                          id="name"
-                          name="name"
-                          class="form-control"
-                          required
-                        />
-                      </div>
-                    </div>
-                    <div class="col-lg-6">
-                      <div class="form-group">
-                        <label for="email">email</label>
-                        <input
-                          type="email"
-                          id="email"
-                          name="email"
-                          class="form-control"
-                          required
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="message">message</label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      class="form-control"
-                      rows="5"
-                      required
-                    ></textarea>
-                  </div>
-                  <button
-                    type="submit"
-                    class="btn btn-primary submit-btn"
-                    id="submit-btn"
-                  >
-                    send message
-                  </button>
-                </form>
-              </div>
+              <form class="custom-contact-form">
+                <div class="custom-form-group">
+                  <label for="custom-name">name</label>
+                  <input
+                    type="text"
+                    id="custom-name"
+                    name="name"
+                    class="custom-form-control"
+                    required
+                  />
+                </div>
+                <div class="custom-form-group">
+                  <label for="custom-email">email</label>
+                  <input
+                    type="email"
+                    id="custom-email"
+                    name="email"
+                    class="custom-form-control"
+                    required
+                  />
+                </div>
+                <div class="custom-form-group">
+                  <label for="custom-message">message</label>
+                  <textarea
+                    id="custom-message"
+                    name="message"
+                    class="custom-form-control"
+                    rows="5"
+                    required
+                  ></textarea>
+                </div>
+                <button type="submit" class="custom-submit-btn">
+                  send message
+                </button>
+              </form>
             </div>
           </div>
         </section>
@@ -134,37 +122,26 @@
 
       <footer class="d-flex justify-content-between">
         <div class="text-start footer-info">
-          <p>
-            2024 · designed & developed with love <br />
-            and caffe macchiato by
-            <a
-              href="https://www.linkedin.com/in/natalievanwijnen"
-              target="_blank"
-              >Natalie van Wijnen</a
-            >
-            <br />
-            open sourced on
-            <a href="https://github.com/natalievanwijnen" target="_blank"
-              >GitHub</a
-            >
-            <br />
-            hosted on
-            <a href="https://anotherdesign-online.netlify.app/" target="_blank"
-              >Netlify</a
-            >
-          </p>
+          designed & developed by
+          <a href="https://www.linkedin.com/in/natalievanwijnen" target="_blank"
+            >Natalie van Wijnen</a
+          >
+          · open sourced on
+          <a href="https://github.com/natalievanwijnen" target="_blank"
+            >GitHub</a
+          >
+          · hosted on
+          <a href="https://anotherdesign-online.netlify.app/" target="_blank"
+            >Netlify</a
+          >
         </div>
-        <!--
-        <div class="text-end address">
-          <p>
-            lorem.studio 19 St Name's Ave
-            <br />
-            FK4 2EA North Village
-            <br />
-            Placeholder City, Country
-          </p>
+        <div class="text-end footer-info">
+          <a href="https://www.linkedin.com/in/natalievanwijnen" target="_blank"
+            >LinkedIn</a
+          >
+          ·
+          <a href="mailto:welcome@anotherdesign.studio">Email</a>
         </div>
-        -->
       </footer>
     </div>
     <script

@@ -64,6 +64,11 @@ main {
   padding: 150px;
 }
 
+.logo {
+  font-family: var(--logo-font);
+  font-weight: 300;
+}
+
 .landing-section h1 {
   color: var(--graphite);
   font-family: var(--body-font);
@@ -132,15 +137,7 @@ span.accent {
 }
 
 .section-title-about {
-  font-weight: 500;
   margin-bottom: 25px;
-  text-align: center;
-}
-
-.section-title-contact {
-  font-weight: 500;
-  margin-bottom: 25px;
-  text-align: center;
 }
 
 #work .gallery {
@@ -205,6 +202,7 @@ img.portrait {
 .call-to-action a {
   border-bottom: 2px solid transparent;
   color: var(--ivory);
+  font-size: 24px;
   padding: 5px;
   text-decoration: none;
   transition: border-color 0.3s ease;
@@ -225,7 +223,8 @@ img.portrait {
 
 #about,
 #contact {
-  padding: 100px 0;
+  padding: 50px 0;
+  padding-bottom: 0;
 }
 
 .about-text,
@@ -246,11 +245,69 @@ footer {
   color: var(--graphite);
   font-family: var(--body-font);
   padding: 40px;
+  padding-bottom: 20px;
 }
 
 footer a {
   color: var(--graphite);
   text-decoration: none;
+}
+
+.about footer,
+.contact footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px;
+  padding-bottom: 20px;
+  background-color: var(--ivory);
+  color: var(--graphite);
+  font-family: var(--body-font);
+}
+
+/* Form */
+.custom-form-group {
+  margin-bottom: 20px;
+}
+
+.custom-form-group label {
+  color: var(--graphite);
+}
+
+.custom-form-control {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid var(--pale-lime);
+  border-radius: 5px;
+  background-color: var(--ivory);
+  color: var(--graphite);
+  transition: border-color 0.3s ease;
+}
+
+.custom-form-control:focus {
+  outline: none;
+  border-color: var(--graphite);
+}
+
+.custom-form-control textarea {
+  resize: vertical;
+}
+
+.custom-submit-btn {
+  background-color: var(--pale-lime);
+  color: var(--graphite);
+  border: 2px solid var(--pale-lime);
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border 0.3s ease, color 0.3s ease;
+}
+
+.custom-submit-btn:hover {
+  background-color: var(--graphite);
+  border: 2px solid var(--graphite);
+  color: var(--ivory);
 }
 
 /* Medium devices */
@@ -317,10 +374,6 @@ footer a {
 
   .overlay p {
     font-size: 18px !important;
-  }
-
-  .about-text-home {
-    max-width: 75%;
   }
 }
 

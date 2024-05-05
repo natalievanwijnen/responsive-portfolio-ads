@@ -48,6 +48,10 @@ footer a,
   transition: border-color 0.3s ease;
 }
 
+#contact a {
+  background-color: var(--pale-lime);
+}
+
 .nav-links a:hover,
 footer a:hover,
 #contact a:hover {
@@ -213,6 +217,11 @@ span.accent {
   width: 150px;
 }
 
+#about .signature {
+  display: block;
+  margin-top: 25px;
+}
+
 #about,
 #contact {
   padding: 50px 0;
@@ -226,10 +235,6 @@ span.accent {
   font-size: 18px;
   line-height: 1.5;
   margin-bottom: 30px;
-}
-
-#contact a {
-  background-color: var(--pale-lime);
 }
 
 span.material-symbols-outlined {
